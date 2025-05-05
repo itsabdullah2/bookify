@@ -86,6 +86,8 @@ To add a new page to the application:
 - User profiles
 - Payment processing
 
+## Visit Bookify from here: https://bookify-zeta-ashy.vercel.app/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
