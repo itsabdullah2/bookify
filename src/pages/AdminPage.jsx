@@ -53,7 +53,7 @@ const AdminPage = () => {
 
       <div className="flex space-x-4 mb-6">
         <button
-          className={`px-4 py-2 rounded ${
+          className={`px-4 py-2 rounded cursor-pointer ${
             activeTab === "books" ? "bg-blue-600 text-white" : "bg-gray-200"
           }`}
           onClick={() => setActiveTab("books")}
@@ -61,7 +61,7 @@ const AdminPage = () => {
           Manage Books
         </button>
         <button
-          className={`px-4 py-2 rounded ${
+          className={`px-4 py-2 rounded cursor-pointer ${
             activeTab === "users" ? "bg-blue-600 text-white" : "bg-gray-200"
           }`}
           onClick={() => setActiveTab("users")}
@@ -98,10 +98,10 @@ const AdminPage = () => {
                   <td className="border px-4 py-2">{book.rentals}</td>
                   <td className="border px-4 py-2">
                     <div className="flex space-x-2">
-                      <button className="px-2 py-1 border rounded text-sm">
+                      <button className="px-2 py-1 border rounded text-sm cursor-pointer">
                         Edit
                       </button>
-                      <button className="px-2 py-1 border rounded text-sm bg-red-500 text-white">
+                      <button className="px-2 py-1 border rounded text-sm bg-red-500 text-white cursor-pointer">
                         Delete
                       </button>
                     </div>
@@ -134,10 +134,10 @@ const AdminPage = () => {
                   <td className="border px-4 py-2">{user.booksRented}</td>
                   <td className="border px-4 py-2">
                     <div className="flex space-x-2">
-                      <button className="px-2 py-1 border rounded text-sm">
+                      <button className="px-2 py-1 border rounded text-sm cursor-pointer">
                         View Details
                       </button>
-                      <button className="px-2 py-1 border rounded text-sm bg-red-500 text-white">
+                      <button className="px-2 py-1 border rounded text-sm bg-red-500 text-white cursor-pointer">
                         Suspend
                       </button>
                     </div>
