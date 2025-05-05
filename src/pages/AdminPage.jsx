@@ -73,7 +73,7 @@ const AdminPage = () => {
       {activeTab === "books" && (
         <div>
           <div className="flex justify-end mb-4">
-            <button className="bg-green-600 text-white px-4 py-2 rounded">
+            <button className="bg-green-600 text-white px-4 py-2 rounded cursor-pointer">
               Add New Book
             </button>
           </div>
