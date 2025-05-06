@@ -77,75 +77,79 @@ const AdminPage = () => {
               Add New Book
             </button>
           </div>
-          <table className="w-full border-collapse border">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="border px-4 py-2">ID</th>
-                <th className="border px-4 py-2">Title</th>
-                <th className="border px-4 py-2">Author</th>
-                <th className="border px-4 py-2">In Stock</th>
-                <th className="border px-4 py-2">Total Rentals</th>
-                <th className="border px-4 py-2">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {books.map((book) => (
-                <tr key={book.id}>
-                  <td className="border px-4 py-2">{book.id}</td>
-                  <td className="border px-4 py-2">{book.title}</td>
-                  <td className="border px-4 py-2">{book.author}</td>
-                  <td className="border px-4 py-2">{book.stock}</td>
-                  <td className="border px-4 py-2">{book.rentals}</td>
-                  <td className="border px-4 py-2">
-                    <div className="flex space-x-2">
-                      <button className="px-2 py-1 border rounded text-sm cursor-pointer">
-                        Edit
-                      </button>
-                      <button className="px-2 py-1 border rounded text-sm bg-red-500 text-white cursor-pointer">
-                        Delete
-                      </button>
-                    </div>
-                  </td>
+          <div className="overflow-x-auto">
+            <table className="min-w-full border-collapse border">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border px-4 py-2">ID</th>
+                  <th className="border px-4 py-2">Title</th>
+                  <th className="border px-4 py-2">Author</th>
+                  <th className="border px-4 py-2">In Stock</th>
+                  <th className="border px-4 py-2">Total Rentals</th>
+                  <th className="border px-4 py-2">Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {books.map((book) => (
+                  <tr key={book.id}>
+                    <td className="border px-4 py-2">{book.id}</td>
+                    <td className="border px-4 py-2">{book.title}</td>
+                    <td className="border px-4 py-2">{book.author}</td>
+                    <td className="border px-4 py-2">{book.stock}</td>
+                    <td className="border px-4 py-2">{book.rentals}</td>
+                    <td className="border px-4 py-2">
+                      <div className="flex space-x-2">
+                        <button className="px-2 py-1 border rounded text-sm cursor-pointer">
+                          Edit
+                        </button>
+                        <button className="px-2 py-1 border rounded text-sm bg-red-500 text-white cursor-pointer">
+                          Delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
       {activeTab === "users" && (
-        <div>
-          <table className="w-full border-collapse border mt-6">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="border px-4 py-2">ID</th>
-                <th className="border px-4 py-2">Name</th>
-                <th className="border px-4 py-2">Email</th>
-                <th className="border px-4 py-2">Books Rented</th>
-                <th className="border px-4 py-2">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((user) => (
-                <tr key={user.id}>
-                  <td className="border px-4 py-2">{user.id}</td>
-                  <td className="border px-4 py-2">{user.name}</td>
-                  <td className="border px-4 py-2">{user.email}</td>
-                  <td className="border px-4 py-2">{user.booksRented}</td>
-                  <td className="border px-4 py-2">
-                    <div className="flex space-x-2">
-                      <button className="px-2 py-1 border rounded text-sm cursor-pointer">
-                        View Details
-                      </button>
-                      <button className="px-2 py-1 border rounded text-sm bg-red-500 text-white cursor-pointer">
-                        Suspend
-                      </button>
-                    </div>
-                  </td>
+        <div className="mt-6">
+          <div className="overflow-x-auto">
+            <table className="min-w-full border-collapse border">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="border px-4 py-2">ID</th>
+                  <th className="border px-4 py-2">Name</th>
+                  <th className="border px-4 py-2">Email</th>
+                  <th className="border px-4 py-2">Books Rented</th>
+                  <th className="border px-4 py-2">Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {users.map((user) => (
+                  <tr key={user.id}>
+                    <td className="border px-4 py-2">{user.id}</td>
+                    <td className="border px-4 py-2">{user.name}</td>
+                    <td className="border px-4 py-2">{user.email}</td>
+                    <td className="border px-4 py-2">{user.booksRented}</td>
+                    <td className="border px-4 py-2">
+                      <div className="flex space-x-2">
+                        <button className="px-2 py-1 border rounded text-sm cursor-pointer">
+                          View Details
+                        </button>
+                        <button className="px-2 py-1 border rounded text-sm bg-red-500 text-white cursor-pointer">
+                          Suspend
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </div>
